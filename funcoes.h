@@ -37,13 +37,24 @@ int divisao(int x, int y)
 }
 
 // Função de porcentagem
-
 float porcentagem (float valor, float porcent)
 {
 	float calculo = (porcent/100)*valor;
 	return calculo;
 }
 
+// função descobrir porcent de um número
+float descobrir_porcentagem_numero (float valor, float valor2)
+{
+	if (valor == 0)
+	{
+		valor = 1;
+		float calculo = valor/valor2;
+	}else
+	{
+		float calculo = (valor2*100)/valor;
+	}
+}
 
 
 #endif

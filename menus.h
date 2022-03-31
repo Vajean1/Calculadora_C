@@ -142,6 +142,24 @@ void menu_porcentagem()
 			break;
 		}
 		case 2:{
+			system("cls");
+			printf("Descobrir quanto um número representa de porcentagem em relação a outro.\n\n");
+			do
+			{
+			printf("Digite um valor: ");
+			scanf("%f", &valor_1);
+			printf("Digite o número que quer descobrir a porcentagem em relação ao outro: ");
+			scanf("%f", &valor_2);
+			printf("O número %.1f representa %.1f porcento de %.1f.", valor_2, descobrir_porcentagem_numero(valor_1, valor_2), valor_1);
+			printf("\n\n Deseja continuar nesta operação?\n[ 0 ] - Não\n[ 1 ] - Sim\nQual opção deseja?");
+				scanf("%d", &continuar);
+				printf("\n\n\n");
+				if (continuar == 0)
+				{
+					menu_porcentagem();
+					break;
+				}
+			}while(continuar == 1);	
 			break;
 		}
 		case 3:{
